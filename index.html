@@ -76,14 +76,14 @@
                 <div class="w-full space-y-6">
                     <h2 class="text-4xl font-semibold text-[#100F0F] text-center">Search your phone</h2>
                     <div class="flex max-w-[750px] mx-auto rounded-lg">
-                        <input type="text" class="flex-1 bg-[rgba(16,15,15,0.05)] px-6 py-2" placeholder="Search your phone"><button class="px-10 py-4 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Search</button>
+                        <input id="search-inputField" type="text" class="flex-1 bg-[rgba(16,15,15,0.05)] px-6 py-2" placeholder="Search your phone"><button onclick="phoneHandler()" class="px-10 py-4 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Search</button>
                     </div>
                 </div>
                 <!-- Input Section End -->
 
                 <!-- Phones Display Start -->
-                <div class="grid grid-cols-3 gap-x-6 gap-y-6 mt-14">
-                    <div class="p-5 border rounded-lg">
+                <div id="phones-container" class="grid grid-cols-3 gap-x-6 gap-y-6 mt-14">
+                    <!-- <div class="p-5 border rounded-lg">
                         <div class="bg-[rgba(13,110,253,0.05)] px-11 py-9 rounded-lg flex justify-center">
                             <img src="img/phone1.png" alt="">
                         </div>
@@ -93,7 +93,7 @@
                             <p class="text-[#403F3F] text-2xl font-bold">$999</p>
                             <button class="px-6 py-2 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Show Details</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Phones Display End -->
             </div>
@@ -101,6 +101,16 @@
         <!-- Phone Section End -->
     </main>
     <!-- Main Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Script file -->
+    <script src="api/utility.js"></script>
+    <script src="api/app.js"></script>
 </body>
 
 </html>
