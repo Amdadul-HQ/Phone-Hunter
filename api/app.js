@@ -27,7 +27,7 @@ const getPhones = (data,isShowAll) => {
   phones.forEach((phone) => {
     const phoneDiv = document.createElement("div");
     phoneDiv.innerHTML = `
-    <div class="p-5 border rounded-lg">
+    <div class="p-5 border h-[630px] rounded-lg">
         <div class="bg-[rgba(13,110,253,0.05)] px-11 py-9 rounded-lg flex justify-center">
             <img src="${phone.image}" alt="">
         </div>
@@ -93,22 +93,4 @@ const handleShowDetailsButton = async (id) => {
           <button class="btn">Close</button>
       </form>
   </div>`
-  // phoneDeitlis.innerHTML = `
-  // <div class="bg-[rgba(13,110,253,0.05)] flex justify-center items-center px-40 py-12 rounded-lg">
-  // <img src="${data.data.image}" alt="">
-  // </div>
-  // <div class="space-y-5">
-  // <h3 class="text-3xl text-[#403F3F] font-bold">${data.data.name}</h3>
-  // <p class="text-base text-[#706F6F] font-normal">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Storage :</span> ${data.data.mainFeatures.storage}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Display Size :</span>${data.data.mainFeatures.displaySize}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Chipset :</span>${data.data.mainFeatures.chipSet}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Memory :</span>${data.data.mainFeatures.memory}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Slug :</span>${data.data.slug}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Release data :</span>${data.data.releaseDate}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">Brand :</span>${data.data.brand}</p>
-  // <p><span class="text-xl text-[#403F3F] font-semibold">GPS :</span>${data.data.others.GPS}</p>
-  // <button class="btn">Close</button>
-  // </div>
-  // `
 }

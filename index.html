@@ -26,7 +26,7 @@
 
         ;
 
-        * {
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -41,10 +41,10 @@
 <body class="font-poppins">
 
     <!-- Header Section Start -->
-    <header class="bg-[rgba(13,110,253,0.05)] h-[806px]">
+    <header class="bg-[rgba(13,110,253,0.05)] h-[806px] px-4 lg:px-0">
         <!-- Nav bar Start -->
         <nav class="max-w-screen-xl mx-auto flex justify-between items-center py-12">
-            <h3 class="text-2xl font-bold text-[#403F3F]">Hot Gadgets</h3>
+            <h3 class="lg:text-2xl font-bold text-[#403F3F]">Hot Gadgets</h3>
             <button
                 class="px-10 py-4 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms] ">Sign
                 Up</button>
@@ -55,8 +55,8 @@
         <section>
             <div class="max-w-screen-xl mx-auto my-12">
                 <div class="text-center space-y-6">
-                    <h1 class="text-7xl font-bold text-[#100F0F]">Apple Iphone 13 Pro Max</h1>
-                    <p class="text-lg font-normal text-[#706F6F] max-w-[738px] mx-auto">There are many variations of
+                    <h1 class="lg:text-7xl font-bold text-[#100F0F]">Apple Iphone 13 Pro Max</h1>
+                    <p class="lg:text-lg font-normal text-[#706F6F] max-w-[738px] mx-auto">There are many variations of
                         passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by
                         injected humou.</p>
 
@@ -67,9 +67,9 @@
 
         <!-- Banner Image Start -->
         <div class="flex items-end justify-center">
-            <img class="w-[318px] h-[538px] " src="img/banner.png" alt="">
-            <img src="img/banner.png" alt="">
-            <img class="w-[318px] h-[538px] " src="img/banner.png" alt="">
+            <img class="w-[318px] h-[538px] lg:flex hidden " src="img/banner.png" alt="">
+            <img class="lg:w-[400px] w-96" src="img/banner.png" alt="">
+            <img class="w-[318px] h-[538px] lg:flex hidden" src="img/banner.png" alt="">
         </div>
         <!-- Banner Image End -->
     </header>
@@ -81,42 +81,29 @@
         <section>
             <div class="max-w-screen-xl mx-auto mt-96 mb-32">
                 <!-- Input Section Start -->
-                <div class="w-full space-y-6">
-                    <h2 class="text-4xl font-semibold text-[#100F0F] text-center">Search your phone</h2>
-                    <div class="flex max-w-[750px] mx-auto rounded-lg">
-                        <input id="search-inputField" type="text" class="flex-1 bg-[rgba(16,15,15,0.05)] px-6 py-2"
+                <div class="lg:w-full w-11/12 mx-auto space-y-6">
+                    <h2 class="lg:text-4xl font-semibold text-[#100F0F] text-center">Search your phone</h2>
+                    <div class="flex lg:max-w-[750px] mx-auto rounded-lg">
+                        <input id="search-inputField" type="text" class="flex-1 bg-[rgba(16,15,15,0.05)] px-4 py-2 lg:px-6 lg:py-2"
                             placeholder="Search your phone"><button onclick="phoneHandler()"
-                            class="px-10 py-4 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Search</button>
+                            class="lg:px-10 px-5 py-2 lg:py-4 bg-[#0D6EFD] rounded-lg text-white lg:text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Search</button>
                     </div>
                 </div>
                 <!-- Input Section End -->
 
                 <!-- Phones Display Start -->
-                <div id="loading-container" class="flex justify-center hidden items-center">
+                <div id="loading-container" class="flex justify-center items-center hidden">
                     <span class="loading w-10 mt-32 loading-spinner loading-md text-[#0D6EFD]"></span>
                 </div>
-                <div id="phones-container" class="grid grid-cols-3 gap-x-6 gap-y-6 mt-14">
-
-                    <!-- <div class="p-5 border rounded-lg">
-                        <div class="bg-[rgba(13,110,253,0.05)] px-11 py-9 rounded-lg flex justify-center">
-                            <img src="img/phone1.png" alt="">
-                        </div>
-                        <div class="space-y-6 mt-5 text-center">
-                            <h3 class="text-[#403F3F] text-2xl font-bold">Iphone 13 Pro Max</h3>
-                            <p class="text-[#706F6F] text-lg font-normal">There are many variations of passages of available, but the majority have suffered</p>
-                            <p class="text-[#403F3F] text-2xl font-bold">$999</p>
-                            <button class="px-6 py-2 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms]">Show Details</button>
-                        </div>
-                    </div> -->
-
+                <div id="phones-container" class="grid lg:grid-cols-3 grid-cols-1 px-4 lg:px-0 gap-x-6 gap-y-6 mt-14">
                 </div>
                 <!-- Phones Display End -->
                 <!-- Modal Start -->
                 <!-- You can open the modal using ID.showModal() method -->
-                
+
                 <dialog id="my_modal_4" class="modal">
                     <div id="showPhoneDeitls" class="modal-box w-11/12 max-w-5xl">
-                        
+
                     </div>
                 </dialog>
                 <!-- Modal End -->
@@ -135,8 +122,52 @@
     <!-- Main Section End -->
 
     <!-- Footer Section Start -->
-    <footer>
-
+    <footer class="bg-[rgba(13,110,253,0.05)]">
+        <div class="max-w-screen-xl mx-auto mt-10">
+            <div class="flex justify-between pt-32 pb-12">
+                <div class="space-y-4">
+                    <h3 class="lg:text-5xl text-[#100F0F] font-bold">Hot Gadgets</h3>
+                    <p class="lg:text-lg text-[#706F6F] font-semibold">You can definitely work.</p>
+                </div>
+                <div class="lg:flex items-center">
+                    <img src="img/Social.png" alt="">
+                    <button
+                        class="px-10 py-4 bg-[#0D6EFD] rounded-lg text-white text-xl font-bold hover:bg-[#4578c5] transition-[500ms] ">Join
+                        Premium</button>
+                </div>
+            </div>
+            <hr class="text-[#CFCFCF] mb-12">
+            <div class="grid lg:grid-cols-4 grid-cols-2 lg:justify-between pb-32 text-xl text-[#403F3F] font-medium">
+                <ul class="space-y-3">
+                    <li>Product</li>
+                    <li>Browse jobs</li>
+                    <li>Remote jobs</li>
+                    <li>Startup jobs</li>
+                    <li>Company jobs</li>
+                </ul>
+                <ul class="space-y-3">
+                    <li>Popular</li>
+                    <li>UIUX Design</li>
+                    <li>Product Design</li>
+                    <li>Back-End Developer</li>
+                    <li>Front-End Developer</li>
+                </ul>
+                <ul class="space-y-3 lg:text-right lg:mt-0 mt-8">
+                    <li>Resource</li>
+                    <li>Faq</li>
+                    <li>Support</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+                <ul class="space-y-3 lg:text-right lg:mt-0 mt-8">
+                    <li>Company</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Career Tips</li>
+                    <li>Careers</li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <!-- Footer Section End -->
 
