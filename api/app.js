@@ -11,6 +11,14 @@ const getPhones = (data,isShowAll) => {
   const phonesContainer = getElementById("phones-container");
   phonesContainer.textContent = "";
 
+  const nothingFoundPage = getElementById('nothingFound');
+  if (phones.length === 0) {
+    nothingFoundPage.classList.remove('hidden');
+  }
+  else{
+    nothingFoundPage.classList.add('hidden');
+  }
+
   const showAllButton = getElementById('showAllButtonContainer');
   if (phones.length > 9 && !isShowAll) {
     showAllButton.classList.remove('hidden');
@@ -66,7 +74,7 @@ const handleShowAllButton = () => {
 }
 
 const handleShowDetailsButton = async (id) => {
-  console.log('click on show details');
+  // console.log('click on show details');
   console.log(id);
   const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
   const data = await res.json();
